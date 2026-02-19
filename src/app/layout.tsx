@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://diegodhh.github.io/arena"),
   title: "The Arena — Contained AI Competition Through Physical Isolation",
   description:
     "A proposal for physically isolated computing infrastructure where AI actors compete at full speed, contained by walls we can turn off.",
@@ -24,6 +25,14 @@ export const metadata: Metadata = {
     description:
       "A Proposal for Contained AI Competition Through Physical Isolation",
     type: "article",
+    url: "https://diegodhh.github.io/arena/",
+    siteName: "The Arena",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Arena",
+    description:
+      "A Proposal for Contained AI Competition Through Physical Isolation",
   },
 };
 
