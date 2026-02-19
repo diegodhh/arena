@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "The Arena — Contained AI Competition Through Physical Isolation",
   description:
     "A proposal for physically isolated computing infrastructure where AI actors compete at full speed, contained by walls we can turn off.",
+  icons: {
+    icon: "/arena/icon.svg",
+  },
   openGraph: {
     title: "The Arena",
     description:
