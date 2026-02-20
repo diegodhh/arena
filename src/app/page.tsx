@@ -616,7 +616,7 @@ export default function Home() {
           </Section>
 
           {/* Footer note */}
-          <div className="border-t border-border pt-8">
+          <div className="border-t border-border pt-8 space-y-6">
             <p className="text-center text-sm leading-relaxed text-muted italic">
               This proposal is a starting point for discussion, not a finished
               plan. Every element is open to critique, revision, and
@@ -624,6 +624,23 @@ export default function Home() {
               physically contained AI competition before it&apos;s too late to
               build the walls.
             </p>
+
+            <div className="rounded-lg border border-border bg-surface/50 px-5 py-4">
+              <p className="text-center text-xs leading-relaxed text-muted">
+                This article is the result of an iterative conversation with{" "}
+                <a
+                  href="https://claude.ai"
+                  className="font-medium text-foreground/70 underline underline-offset-2 hover:text-foreground"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Claude
+                </a>
+                . The ideas were developed, challenged, and refined through
+                dialogue — a human exploring a concept with AI as a thinking
+                partner. The writing was shaped by that collaboration.
+              </p>
+            </div>
           </div>
         </article>
       </main>
