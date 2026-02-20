@@ -629,6 +629,50 @@ export default function Home() {
             </p>
           </Section>
 
+          <Divider />
+
+          {/* Open Weaknesses */}
+          <Section title="Open Weaknesses">
+            <P>
+              This proposal has unresolved problems. Listing them here is
+              intentional — these are the points that need the most work, and
+              we&apos;d rather name them than hide them.
+            </P>
+
+            <div className="space-y-6">
+              <Weakness
+                title="The atom/bit boundary is more porous than presented"
+                text="A pill can be reverse-engineered. A material can be analyzed with spectroscopy. And some outputs are pure information — a mathematical proof, a scientific theory, an algorithm. These don't come out as physical objects. The boundary between atoms and bits is not as clean as the proposal needs it to be."
+              />
+              <Weakness
+                title="'Pull the plug' assumes we'd know when to pull it"
+                text="The entire proposal rests on the ability to recognize when AI exceeds our control and shut it down. But the alignment problem is precisely that we might not recognize it. A superintelligence inside the Arena could appear aligned while it isn't. The fuse doesn't work if you don't know when to blow it."
+              />
+              <Weakness
+                title="Total freedom contradicts protected zones"
+                text="The proposal promises unrestricted competition inside the Arena, then lists prohibited activities (autonomous weapons, surveillance systems). These two commitments are in tension. If there are rules, it's not total freedom. If there are no rules, then the worst applications develop inside the walls."
+              />
+              <Weakness
+                title="Governance is under-specified"
+                text="'A treaty-based international organization' is doing enormous work in a single sentence. Getting the US, China, Russia, and others to agree on who controls the most powerful infrastructure on Earth is arguably harder than the AI problem itself. This needs a concrete governance design, not a reference to CERN."
+              />
+              <Weakness
+                title="Halting external deployment may be unenforceable"
+                text="Open-source models are already released. Thousands of startups train their own. Freezing capabilities outside the Arena requires a global enforcement capacity that doesn't exist — and building it may be as hard as building the Arena itself."
+              />
+              <Weakness
+                title="A superintelligence could escape through physical channels"
+                text="If the AI inside is genuinely superintelligent, it could encode information in physical outputs in ways imperceptible to us — molecular variations in pharmaceuticals, patterns in materials, social manipulation of researchers. Physical containment assumes we're smart enough to detect an escape designed by something smarter than us."
+              />
+            </div>
+
+            <P className="mt-8">
+              These are not reasons to abandon the proposal. They are reasons
+              to keep working on it. If you have ideas on how to address any of
+              these, the conversation is open.
+            </P>
+          </Section>
+
           {/* Footer note */}
           <div className="border-t border-border pt-8">
             <p className="text-center text-sm leading-relaxed text-muted italic">
@@ -740,6 +784,17 @@ function Objection({
         &ldquo;{q}&rdquo;
       </h4>
       <p className="leading-relaxed text-foreground/90">{children}</p>
+    </div>
+  );
+}
+
+function Weakness({ title, text }: { title: string; text: string }) {
+  return (
+    <div className="rounded-lg border border-border bg-surface/50 p-5">
+      <h4 className="mb-2 text-sm font-semibold tracking-tight text-foreground">
+        {title}
+      </h4>
+      <p className="text-sm leading-relaxed text-foreground/75">{text}</p>
     </div>
   );
 }
